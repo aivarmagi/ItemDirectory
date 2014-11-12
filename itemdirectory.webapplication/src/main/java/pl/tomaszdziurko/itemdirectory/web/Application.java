@@ -8,6 +8,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
 
 import pl.tomaszdziurko.itemdirectory.web.view.HomePage;
+import pl.tomaszdziurko.itemdirectory.web.view.locations.LocationsPage;
 
 @Component(value = "wicketApplication")
 public class Application extends WebApplication {
@@ -27,9 +28,9 @@ public class Application extends WebApplication {
 
 		mountBookmarkablePages();
 		mountErrorLandingPages();
+		getMarkupSettings().setStripWicketTags(true);
 
 		if (getConfigurationType().equals(WebApplication.DEPLOYMENT)) {
-			getMarkupSettings().setStripWicketTags(true);
 			getMarkupSettings().setStripComments(true);
 			getMarkupSettings().setCompressWhitespace(true);
 		}
@@ -37,7 +38,7 @@ public class Application extends WebApplication {
 	}
 
 	private void mountBookmarkablePages() {
-
+		mountBookmarkablePage("locations", LocationsPage.class);
 	}
 
 	private void mountErrorLandingPages() {

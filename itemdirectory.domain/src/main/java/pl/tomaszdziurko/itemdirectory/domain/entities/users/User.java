@@ -1,8 +1,6 @@
 package pl.tomaszdziurko.itemdirectory.domain.entities.users;
 
-import javax.persistence.Column;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 import pl.tomaszdziurko.itemdirectory.domain.entities.AbstractEntity;
 
@@ -11,6 +9,7 @@ import pl.tomaszdziurko.itemdirectory.domain.entities.AbstractEntity;
 public class User extends AbstractEntity {
 
     @Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(length=255, nullable=false)
