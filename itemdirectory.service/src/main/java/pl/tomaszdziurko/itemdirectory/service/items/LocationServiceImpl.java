@@ -1,5 +1,7 @@
 package pl.tomaszdziurko.itemdirectory.service.items;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -23,7 +25,7 @@ public class LocationServiceImpl implements LocationService {
     }
 
     public void remove(Location location) {
-        locationDao.remove(location);
+        locationDao.removeSafely(location);
     }
 
     public void save(Location location) {

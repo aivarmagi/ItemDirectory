@@ -10,7 +10,7 @@
 	<properties>
 		<wicket.version>1.4.15</wicket.version>
 		<slf4j.version>1.5.11</slf4j.version>
-		<jetty.version>6.1.15</jetty.version>
+		<jetty.version>6.1.26</jetty.version>
 		<spring.version>3.0.5.RELEASE</spring.version>
 		<jpa.version>2.0-cr-1</jpa.version>
         <hibernate.version>3.5.6-Final</hibernate.version>    
@@ -84,6 +84,7 @@
 			<plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+				<version>3.2</version>
                 <configuration>
                     <source>1.5</source>
                     <target>1.5</target>
