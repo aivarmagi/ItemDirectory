@@ -6,6 +6,7 @@ import pl.tomaszdziurko.itemdirectory.domain.entities.AbstractEntity;
 import pl.tomaszdziurko.itemdirectory.domain.entities.IEntity;
 
 import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
@@ -53,7 +54,11 @@ public abstract class AbstractDAO<EntityClass extends AbstractEntity>
 
         findEntityQuery.where(propertyPredicate);       // (5)
 
-        return getEntityManager().createQuery(findEntityQuery).getSingleResult();       // (6)
+        //return getEntityManager().createQuery(findEntityQuery).getSingleResult();       // (6)
+        TypedQuery<EntityClass> query = getEntityManager().createQuery(findEntityQuery);
+            List<EntityClass> entities = query.setMaxResults(1).getResultList();
+
+        if (entities.isEmpty()) return null; else return entities.get(0);
 
         /*
             1. CritieriaBuilder is a factory for almost every method and object in Critieria API, so we use one here.

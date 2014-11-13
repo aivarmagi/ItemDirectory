@@ -40,5 +40,9 @@ public class LocationServiceImpl implements LocationService {
         return locationDao.findByName(locationName);
     }
 
+    public List<Location> findAll() {
+        return locationDao.findAll();
+    }
+
 
 }
