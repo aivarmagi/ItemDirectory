@@ -10,6 +10,8 @@ public interface DAO<EntityClass extends IEntity> {
 
 	EntityClass findById(Long id);
 
+	EntityClass findByProperty(String propertyName, Object propertyValue);
+
 	void remove(EntityClass entity);
 
 	void removeSafely(EntityClass entity);

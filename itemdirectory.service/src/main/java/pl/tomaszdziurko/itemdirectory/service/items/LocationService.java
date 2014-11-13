@@ -15,4 +15,5 @@ public interface LocationService {
 
     long size();
 
+    Location findByName(String locationName);
 }

@@ -6,5 +6,5 @@ import pl.tomaszdziurko.itemdirectory.domain.entities.users.User;
 
 public interface LocationDao extends DAO<Location> {
 
-
+    Location findByName(String locationName);
 }

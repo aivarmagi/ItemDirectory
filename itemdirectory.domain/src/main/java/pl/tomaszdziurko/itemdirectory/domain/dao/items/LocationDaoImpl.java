@@ -2,6 +2,7 @@ package pl.tomaszdziurko.itemdirectory.domain.dao.items;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 
 import org.springframework.stereotype.Repository;
 
@@ -22,5 +23,11 @@ public class LocationDaoImpl extends AbstractDAO<Location> implements LocationDa
         return Location.class;
     }
 
+	public Location findByName(String locationName) {
+		Query findByNameQuery = entityManager.createQuery("from " + getClazz().getSimpleName()
+                +" entity where entity.name = :aName");
+		findByNameQuery.setParameter("aName", locationName);
 
+		return (Location) findByNameQuery.getSingleResult();
+	}
 }

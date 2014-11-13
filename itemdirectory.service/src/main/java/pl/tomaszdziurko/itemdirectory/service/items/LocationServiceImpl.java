@@ -36,4 +36,9 @@ public class LocationServiceImpl implements LocationService {
         return locationDao.merge(location);
     }
 
+    public Location findByName(String locationName) {
+        return locationDao.findByName(locationName);
+    }
+
+
 }
