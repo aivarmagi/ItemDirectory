@@ -43,6 +43,4 @@ public class LocationServiceImpl implements LocationService {
     public List<Location> findAll() {
         return locationDao.findAll();
     }
-
-
 }

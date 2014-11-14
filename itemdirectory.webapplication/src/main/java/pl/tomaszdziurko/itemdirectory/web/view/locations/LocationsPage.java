@@ -40,7 +40,7 @@ public class LocationsPage extends BasePage {
             };
 
                 item.add(editLocationLink);
-
+                item.add(new RemoveLocationLink("removeLocationLink", item.getModelObject()));
             }
         };
 
