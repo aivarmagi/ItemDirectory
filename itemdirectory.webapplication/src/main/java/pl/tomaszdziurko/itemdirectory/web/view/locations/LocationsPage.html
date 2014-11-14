@@ -9,11 +9,16 @@
     <br/>
     <wicket:enclosure child="locations">
     <table>
-        <tr><th>ID</th><th>Name</th></tr>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Actions</th>
+        </tr>
               <span wicket:id="locations">
                   <tr>
                       <td><span wicket:id="id"></span></td>
                       <td><span wicket:id="name"></span></td>
+                      <td><a href wicket:id="editLocationLink">Edit</a></td>
                   </tr>
               </span>
     </table>

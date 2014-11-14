@@ -26,12 +26,24 @@ public class LocationsPage extends BasePage {
 
     private void addLocationsModule() {
         ListView<Location> locations = new ListView<Location>("locations", createModelForLocations()) { // (2)
+
             @Override
-            protected void populateItem(ListItem<Location> item) {             // (3)
+            protected void populateItem(final ListItem<Location> item) {             // (3)
                 item.add(new Label("id", new PropertyModel<Location>(item.getModel(), "id")));    // (4)
                 item.add(new Label("name", new PropertyModel<Location>(item.getModel(), "name")));
+
+            Link<BasePage> editLocationLink = new Link<BasePage>("editLocationLink") {
+                @Override
+                public void onClick() {
+                    setResponsePage(new AddEditLocationPage(item.getModelObject().getId()));
+                }
+            };
+
+                item.add(editLocationLink);
+
             }
         };
+
         locations.setVisible(!locations.getList().isEmpty());
         add(locations);
 
@@ -67,7 +79,7 @@ public class LocationsPage extends BasePage {
 
             @Override
             public void onClick() {
-                setResponsePage(new AddLocationPage());
+                setResponsePage(new AddEditLocationPage());
             }
         });
     }

@@ -8,7 +8,7 @@
 	<version>0.1</version>
 
 	<properties>
-		<wicket.version>1.4.15</wicket.version>
+		<wicket.version>1.4.17</wicket.version>
 		<slf4j.version>1.5.11</slf4j.version>
 		<jetty.version>6.1.26</jetty.version>
 		<spring.version>3.0.5.RELEASE</spring.version>

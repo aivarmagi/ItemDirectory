@@ -50,13 +50,13 @@
     <orderEntry type="library" name="Maven: org.hibernate.javax.persistence:hibernate-jpa-2.0-api:1.0.0.Final" level="project" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.6" level="project" />
     <orderEntry type="module" module-name="itemdirectory.service" />
-    <orderEntry type="library" name="Maven: org.apache.wicket:wicket:1.4.15" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.wicket:wicket-spring:1.4.15" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.wicket:wicket-ioc:1.4.15" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.wicket:wicket:1.4.17" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.wicket:wicket-spring:1.4.17" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.wicket:wicket-ioc:1.4.17" level="project" />
     <orderEntry type="library" name="Maven: cglib:cglib-nodep:2.1_3" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.wicket:wicket-datetime:1.4.15" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.wicket:wicket-datetime:1.4.17" level="project" />
     <orderEntry type="library" name="Maven: joda-time:joda-time:1.6.2" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.wicket:wicket-extensions:1.4.15" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.wicket:wicket-extensions:1.4.17" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-core:3.0.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-asm:3.0.5.RELEASE" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.mortbay.jetty:jetty:6.1.26" level="project" />

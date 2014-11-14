@@ -19,7 +19,7 @@ public class Location extends AbstractEntity {
     @Column(length=255, nullable=false)
     private String name;
 
-    protected Location() {
+    public Location() {
         super();
     }
 
